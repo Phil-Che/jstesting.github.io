@@ -9,22 +9,9 @@
     <a href="philybee@bugcrowdninja.com"> email philybee@bugcrowdninja.com </a>
   </body>
   <script>
-     alert ('lol');
-    # Function to retrieve parameters. 
-    function GetURLParameter(sParam)
-    {
-        var sPageURL = window.location.search.substring(1);
-        var sURLVariables = sPageURL.split('&');
-        for (var i = 0; i < sURLVariables.length; i++) 
-        {
-            var sParameterName = sURLVariables[i].split('=');
-            if (sParameterName[0] == sParam) 
-            {
-                return sParameterName[1];
-            }
-        }
-    }
-    var Param_1=GetURLPrameter('a');
-    alert(Param_1)​
+    alert ('lol');
+   const myUrl = new URL(window.location.toLocaleString());
+   const Param_1 = myUrl.searchParams.get('a');
+   alert(Param_1);
   </script>
 </html>
